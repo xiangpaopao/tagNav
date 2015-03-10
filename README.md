@@ -3,6 +3,13 @@
 
 依赖Zepto、iScroll
 
+示例：
+
+TagNav('#tagList',{
+  type: 'scrollToFirst',
+  curClassName: 'cur',
+  index: 4
+});
 
  @param {String} type  自滚动类型 scrollToFirst/scrollToNext/simple
  
