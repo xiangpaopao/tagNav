@@ -1,0 +1,108 @@
+<html>
+<head>
+    <title>标签导航栏</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <style type="text/css">
+body{margin:0;padding:0;}
+.tag-nav {
+    overflow:hidden;
+    background-color: #a00;
+    height:34px;
+    position:relative;
+
+}
+.tag-nav-scroller ul {
+    padding:0;
+    margin:0;
+display: table;
+table-layout: fixed;
+white-space: nowrap;
+width: auto;
+}
+
+.tag-nav-scroller {
+    position: absolute;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+.tag-nav-scroller li {
+    line-height: 34px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    -webkit-box-flex: 1;
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+}
+.tag-nav-scroller li.active {
+    background-color:#6B0000;
+}
+.tag-nav-scroller ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    display: block;
+    width: 100%;
+    -webkit-box-sizing:border-box;
+    padding: 0 15px;
+}
+
+
+.tag-nav-scroller ul li {
+    display: inline-block;
+}
+
+
+    </style>
+
+
+</head>
+<body>
+<div style="height: 50px;"></div>
+
+<div id="tagNav" class="tag-nav">
+    <div class="tag-nav-scroller">
+        <ul>
+            <li><a href="#test1">手机</a></li>
+            <li><a href="#test2">数码</a></li>
+            <li><a href="#test3">小家电</a></li>
+            <li><a href="#test4">大家电</a></li>
+            <li><a href="#test5">电脑</a></li>
+            <li><a href="#test6">母婴</a></li>
+            <li><a href="#test7">汽车用品</a></li>
+            <li><a href="#test8">钟表</a></li>
+            <li><a href="#test9">珠宝</a></li>
+            <li><a href="#test10">居家</a></li>
+            <li><a href="#test11">图书</a></li>
+            <li><a href="#test12">音响</a></li>
+            <li><a href="#test13">建材</a></li>
+            <li><a href="#test14">运动</a></li>
+            <li><a href="#test15">酒水</a></li>
+            <li><a href="#test16">食品</a></li>
+        </ul>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="zepto.js"></script>
+<script type="text/javascript" src="iscroll-lite.js"></script>
+<script type="text/javascript" src="tagNav.js"></script>
+<script type="text/javascript">
+Zepto(function(){
+    TagNav('#tagNav',{
+        type: 'scrollToFirst',
+    });
+})
+
+
+</script>
+</body>
+</html>
