@@ -96,7 +96,7 @@
                 var self = this;
                 hub.subscribe('select', function(parms) {
                     var el = self.$items.eq(parms.index)[0];
-                    self.iScroll.scrollToElement(el,400)
+                    setTimeout(function(){self.iScroll.scrollToElement(el,400)},180)
                 });
             },
 
@@ -122,7 +122,7 @@
                             within.width : offset.left < within.left ) {
                         listOffset = self.$list.offset();
                         var x = dir ? within.width - offset.left + listOffset.left - offset.width : listOffset.left - offset.left;
-                        self.iScroll.scrollTo( x, 0, 400 );
+                        setTimeout(function(){self.iScroll.scrollTo( x, 0, 400 )},180)
                     }
                     prevIndex = parms.index;
                 });
